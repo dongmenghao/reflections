@@ -1,2 +1,8 @@
 1、初始化版本 git init 会在此版本库的目录下创建一个名为.git的隐藏文件夹。
 2、通过.git文件夹记录文件的修改记录，方便用户返回查找之前的文件修改版本。
+
+git commit提交信息时默认打开sublime？
+1、配置环境变量path 添加sublime_text.exe的路径。如如我的路径为 D:\Program Files (x86)\Sublime Text 2;
+2、git config --global core.editor sublime_text.exe -w
+3、配置完成后，重启bash
+注意：如果命令“git config --global core.editor sublime_text.exe”后不加“-w”后提交空行。
