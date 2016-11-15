@@ -1,8 +1,29 @@
 1、初始化版本 git init 会在此版本库的目录下创建一个名为.git的隐藏文件夹。
 2、通过.git文件夹记录文件的修改记录，方便用户返回查找之前的文件修改版本。
 
+如何查看更改？git diff
+git diff  working directory 工作区 与 staging area 暂存区
+git diff --staged staging area 暂存区与 commit1提交
+git diff commit1 commit2    commit1与commit2
+
 git commit提交信息时默认打开sublime？
 1、配置环境变量path 添加sublime_text.exe的路径。如如我的路径为 D:\Program Files (x86)\Sublime Text 2;
 2、git config --global core.editor sublime_text.exe -w
 3、配置完成后，重启bash
 注意：如果命令“git config --global core.editor sublime_text.exe”后不加“-w”后提交空行。
+
+分支的创建与使用
+在哪些情况下，分支可以帮助你有序地组织历史记录？分支将如何提供帮助？
+在给项目添加实验性功能时可以使用分支。分支上的更改并不会影响正式版的master分支。
+分支的常用命令：
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
